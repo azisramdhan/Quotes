@@ -7,6 +7,22 @@
 
 import Foundation
 
-struct Quote {
+public struct Quote: Hashable, Identifiable, Sendable {
+    public let id: String
+    public let text: String
+    public let author: String
     
+    public init(id: String, text: String, author: String) {
+        self.id = id
+        self.text = text
+        self.author = author
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    public static func == (lhs: Quote, rhs: Quote) -> Bool {
+        return lhs.id == rhs.id
+    }
 }

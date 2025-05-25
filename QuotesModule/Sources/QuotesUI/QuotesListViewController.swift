@@ -1,7 +1,16 @@
-// QuotesListViewController.swift
+//
+//  QuotesListViewController.swift
+//  QuotesModules
+//
+//  Created by Azis Ramdhan on 25/05/25.
+//
+
+import QuotesCore
+import QuotesData
+#if canImport(UIKit)
 import UIKit
 
-class QuotesListViewController: UIViewController {
+public class QuotesListViewController: UIViewController {
     
     // MARK: - Properties
     private var collectionView: UICollectionView!
@@ -12,8 +21,16 @@ class QuotesListViewController: UIViewController {
         case main
     }
     
+    public init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     // MARK: - Lifecycle
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
         configureCollectionView()
@@ -112,9 +129,10 @@ class QuotesListViewController: UIViewController {
 
 // MARK: - UICollectionViewDelegate
 extension QuotesListViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let quote = dataSource.itemIdentifier(for: indexPath) else { return }
         let detailVC = QuoteDetailViewController(quote: quote)
         navigationController?.pushViewController(detailVC, animated: true)
     }
 }
+#endif

@@ -1,4 +1,12 @@
-// QuoteDetailViewController.swift
+//
+//  QuoteDetailViewController.swift
+//  QuotesModules
+//
+//  Created by Azis Ramdhan on 25/05/25.
+//
+
+import QuotesCore
+#if canImport(UIKit)
 import UIKit
 
 class QuoteDetailViewController: UIViewController {
@@ -115,3 +123,4 @@ class QuoteDetailViewController: UIViewController {
         present(activityViewController, animated: true)
     }
 }
+#endif

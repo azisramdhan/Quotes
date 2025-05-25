@@ -1,18 +1,25 @@
-// QuoteService.swift
-import Foundation
+//
+//  QuoteService.swift
+//  QuotesModule
+//
+//  Created by Azis Ramdhan on 25/05/25.
+//
 
-class QuoteService {
+import Foundation
+import QuotesCore
+
+public class QuoteService {
     private var quotes: [Quote] = []
     
-    init() {
+    public init() {
         loadInitialQuotes()
     }
     
-    func getQuotes() -> [Quote] {
+    public func getQuotes() -> [Quote] {
         return quotes
     }
     
-    func add(quote: Quote) {
+    public func add(quote: Quote) {
         quotes.append(quote)
     }
     
@@ -32,3 +39,4 @@ class QuoteService {
         ]
     }
 }
+
