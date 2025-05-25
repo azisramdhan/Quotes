@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		93BC1EF62DE3467900F42580 /* QuotesCore in Frameworks */ = {isa = PBXBuildFile; productRef = 93BC1EF52DE3467900F42580 /* QuotesCore */; };
+		93BC1EF82DE3467900F42580 /* QuotesData in Frameworks */ = {isa = PBXBuildFile; productRef = 93BC1EF72DE3467900F42580 /* QuotesData */; };
+		93BC1EFA2DE3467900F42580 /* QuotesUI in Frameworks */ = {isa = PBXBuildFile; productRef = 93BC1EF92DE3467900F42580 /* QuotesUI */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		933621CA2DD6AD9B00456FC1 /* Quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93BC1EFA2DE3467900F42580 /* QuotesUI in Frameworks */,
+				93BC1EF62DE3467900F42580 /* QuotesCore in Frameworks */,
+				93BC1EF82DE3467900F42580 /* QuotesData in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +87,9 @@
 			);
 			name = Quotes;
 			packageProductDependencies = (
+				93BC1EF52DE3467900F42580 /* QuotesCore */,
+				93BC1EF72DE3467900F42580 /* QuotesData */,
+				93BC1EF92DE3467900F42580 /* QuotesUI */,
 			);
 			productName = Quotes;
 			productReference = 933621CA2DD6AD9B00456FC1 /* Quotes.app */;
@@ -107,6 +119,9 @@
 			);
 			mainGroup = 933621C12DD6AD9B00456FC1;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				93BC1EF42DE3467900F42580 /* XCLocalSwiftPackageReference "QuotesModule" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 933621CB2DD6AD9B00456FC1 /* Products */;
 			projectDirPath = "";
@@ -339,6 +354,28 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		93BC1EF42DE3467900F42580 /* XCLocalSwiftPackageReference "QuotesModule" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = QuotesModule;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		93BC1EF52DE3467900F42580 /* QuotesCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = QuotesCore;
+		};
+		93BC1EF72DE3467900F42580 /* QuotesData */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = QuotesData;
+		};
+		93BC1EF92DE3467900F42580 /* QuotesUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = QuotesUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 933621C22DD6AD9B00456FC1 /* Project object */;
 }
