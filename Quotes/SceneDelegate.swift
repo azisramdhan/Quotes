@@ -1,5 +1,6 @@
 // SceneDelegate.swift (partial)
 import UIKit
+import QuotesUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
